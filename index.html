@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="TechStore Pro - Tu tienda de tecnología de confianza">
+    <meta name="keywords" content="tecnología, laptops, smartphones, tienda online">
+    <meta name="author" content="TechStore Pro">
+    
+    <title>TechStore Pro - Tu tienda de tecnología</title>
+    
+    <!-- Favicon -->
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🛒</text></svg>">
+    
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+    
+    <!-- Icons CDN -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- CSS -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    
+    <!-- ============================================ -->
+    <!-- LOADER INICIAL -->
+    <!-- ============================================ -->
+    <div id="loader" class="loader-container">
+        <div class="loader">
+            <div class="loader-ring"></div>
+            <div class="loader-ring"></div>
+            <div class="loader-ring"></div>
+            <div class="loader-text">Cargando...</div>
+        </div>
+    </div>
+
+    <!-- ============================================ -->
+    <!-- NAVBAR -->
+    <!-- ============================================ -->
+    <nav id="navbar" class="navbar">
+        <div class="container navbar-content">
+            <div class="logo">
+                <i class="fas fa-shopping-cart"></i>
+                <span id="business-name">TechStore Pro</span>
+            </div>
+            
+            <div id="nav-links" class="nav-links">
+                <a href="#home" class="nav-link">Inicio</a>
+                <a href="#products" class="nav-link">Productos</a>
+                <a href="#data" class="nav-link">Información</a>
+                <a href="#about" class="nav-link">Nosotros</a>
+            </div>
+
+            <div class="nav-actions">
+                <button id="theme-toggle" class="theme-toggle" aria-label="Cambiar tema">
+                    <i class="fas fa-moon"></i>
+                </button>
+                <button id="menu-toggle" class="menu-toggle" aria-label="Menú">
+                    <i class="fas fa-bars"></i>
+                </button>
+            </div>
+        </div>
+    </nav>
+
+    <!-- ============================================ -->
+    <!-- HERO SECTION -->
+    <!-- ============================================ -->
+    <section id="home" class="hero">
+        <div class="hero-bg"></div>
+        <div class="container hero-content">
+            <h1 class="hero-title animate-fade-in" id="hero-title">TechStore Pro</h1>
+            <p class="hero-subtitle animate-fade-in-delay" id="hero-tagline">Tu tienda de tecnología de confianza</p>
+            <p class="hero-description animate-fade-in-delay-2" id="hero-description">
+                Ofrecemos los mejores productos tecnológicos del mercado con garantía y soporte profesional.
+            </p>
+            <div class="hero-buttons animate-fade-in-delay-3">
+                <button class="btn btn-primary" onclick="scrollToSection('products')">
+                    Ver Productos
+                </button>
+                <button class="btn btn-outline" onclick="scrollToSection('about')">
+                    Contactar
+                </button>
+            </div>
+        </div>
+        <div class="scroll-indicator">
+            <i class="fas fa-chevron-down bounce"></i>
+        </div>
+    </section>
+
+    <!-- ============================================ -->
+    <!-- SECCIÓN DE PRODUCTOS -->
+    <!-- ============================================ -->
+    <section id="products" class="section products">
+        <div class="container">
+            <h2 class="section-title">Nuestros Productos</h2>
+            <p class="section-subtitle">Descubre nuestra selección premium</p>
+            
+            <div id="products-grid" class="products-grid">
+                <!-- Los productos se cargan dinámicamente desde config.js -->
+            </div>
+        </div>
+    </section>
+
+    <!-- ============================================ -->
+    <!-- SECCIÓN DE TABLA DE DATOS -->
+    <!-- ============================================ -->
+    <section id="data" class="section data-section">
+        <div class="container">
+            <h2 class="section-title">Información del Servicio</h2>
+            <p class="section-subtitle">Nuestras políticas y beneficios</p>
+            
+            <div class="data-table-container">
+                <table class="data-table">
+                    <thead>
+                        <tr>
+                            <th>Concepto</th>
+                            <th>Valor</th>
+                            <th>Estado</th>
+                        </tr>
+                    </thead>
+                    <tbody id="data-table-body">
+                        <!-- Los datos se cargan dinámicamente desde config.js -->
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </section>
+
+    <!-- ============================================ -->
+    <!-- SECCIÓN SOBRE NOSOTROS -->
+    <!-- ============================================ -->
+    <section id="about" class="section about">
+        <div class="container">
+            <div class="about-content">
+                <div class="about-text">
+                    <h2 class="section-title">Sobre Nosotros</h2>
+                    <p>
+                        En <strong id="about-business-name">TechStore Pro</strong> nos dedicamos a ofrecer 
+                        productos tecnológicos de la más alta calidad. Con más de 10 años 
+                        de experiencia en el mercado, nos hemos consolidado como líderes 
+                        en el sector.
+                    </p>
+                    <p>
+                        Nuestro compromiso es brindar la mejor experiencia de compra, 
+                        con atención personalizada, garantías extendidas y soporte técnico 
+                        especializado.
+                    </p>
+                    <div class="about-stats">
+                        <div class="stat">
+                            <div class="stat-number">10K+</div>
+                            <div class="stat-label">Clientes Satisfechos</div>
+                        </div>
+                        <div class="stat">
+                            <div class="stat-number">500+</div>
+                            <div class="stat-label">Productos</div>
+                        </div>
+                        <div class="stat">
+                            <div class="stat-number">24/7</div>
+                            <div class="stat-label">Soporte</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ============================================ -->
+    <!-- FOOTER -->
+    <!-- ============================================ -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3 id="footer-business-name">TechStore Pro</h3>
+                    <p id="footer-tagline">Tu tienda de tecnología de confianza</p>
+                </div>
+                <div class="footer-section">
+                    <h4>Contacto</h4>
+                    <p>Email: ventas@techstore.com</p>
+                    <p>Tel: +54 11 1234-5678</p>
+                </div>
+                <div class="footer-section">
+                    <h4>Síguenos</h4>
+                    <div class="social-links">
+                        <a href="#" target="_blank" rel="noopener noreferrer" id="social-instagram">
+                            <i class="fab fa-instagram"></i>
+                        </a>
+                        <a href="#" target="_blank" rel="noopener noreferrer" id="social-facebook">
+                            <i class="fab fa-facebook"></i>
+                        </a>
+                        <a href="#" target="_blank" rel="noopener noreferrer" id="social-twitter">
+                            <i class="fab fa-twitter"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 <span id="footer-copyright">TechStore Pro</span>. Todos los derechos reservados.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- ============================================ -->
+    <!-- CHATBOT -->
+    <!-- ============================================ -->
+    <button id="chatbot-toggle" class="chatbot-toggle" aria-label="Abrir chat">
+        <i class="fas fa-comments"></i>
+    </button>
+
+    <div id="chatbot-container" class="chatbot-container hidden">
+        <div class="chatbot-header">
+            <h3>Asistente Virtual</h3>
+            <button id="chatbot-close" aria-label="Cerrar chat">
+                <i class="fas fa-times"></i>
+            </button>
+        </div>
+
+        <div id="chatbot-messages" class="chatbot-messages">
+            <!-- Los mensajes se agregan dinámicamente -->
+        </div>
+
+        <div id="chatbot-options" class="chatbot-options">
+            <!-- Las opciones se cargan desde config.js -->
+        </div>
+
+        <div class="chatbot-input">
+            <input 
+                type="text" 
+                id="chatbot-input-field" 
+                placeholder="Escribe tu mensaje..."
+                autocomplete="off"
+            >
+            <button id="chatbot-send">
+                <i class="fas fa-paper-plane"></i>
+            </button>
+        </div>
+    </div>
+
+    <!-- ============================================ -->
+    <!-- SCRIPTS -->
+    <!-- ============================================ -->
+    <script src="config.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
